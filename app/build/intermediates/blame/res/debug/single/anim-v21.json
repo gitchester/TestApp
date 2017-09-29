@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/chuongtran/Downloads/TestApp/app/build/intermediates/res/merged/debug/anim-v21/design_bottom_sheet_slide_out.xml",
+        "source": "/Users/chuongtran/.android/build-cache/01751bf0dbb9b40d2c73eaa195e5b3299cf0cc54/output/res/anim-v21/design_bottom_sheet_slide_out.xml"
+    },
+    {
+        "merged": "/Users/chuongtran/PlanV/AndroidProjects/TestApp/app/build/intermediates/res/merged/debug/anim-v21/design_bottom_sheet_slide_in.xml",
+        "source": "/Users/chuongtran/.android/build-cache/bd1817ae0d30fc74d0f3855248fffba3abe424d5/output/res/anim-v21/design_bottom_sheet_slide_in.xml"
+    },
+    {
+        "merged": "/Users/chuongtran/PlanV/AndroidProjects/TestApp/app/build/intermediates/res/merged/debug/anim-v21/design_bottom_sheet_slide_out.xml",
+        "source": "/Users/chuongtran/.android/build-cache/bd1817ae0d30fc74d0f3855248fffba3abe424d5/output/res/anim-v21/design_bottom_sheet_slide_out.xml"
+    },
+    {
+        "merged": "/Users/chuongtran/Downloads/TestApp/app/build/intermediates/res/merged/debug/anim-v21/design_bottom_sheet_slide_in.xml",
+        "source": "/Users/chuongtran/.android/build-cache/01751bf0dbb9b40d2c73eaa195e5b3299cf0cc54/output/res/anim-v21/design_bottom_sheet_slide_in.xml"
+    }
+]

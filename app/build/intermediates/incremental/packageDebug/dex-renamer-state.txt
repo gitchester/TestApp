@@ -1,0 +1,7 @@
+#Tue Sep 26 16:22:39 ICT 2017
+base.0=/Users/chuongtran/PlanV/AndroidProjects/TestApp/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_82c4ebdd37d7d2fc44bd754a7795d07d30d88f87
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=/Users/chuongtran/PlanV/AndroidProjects/TestApp/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_86f28ef87a227ab20ad7cc401e0e6cb20c2c6a25/classes.dex
+base.1=/Users/chuongtran/PlanV/AndroidProjects/TestApp/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_86f28ef87a227ab20ad7cc401e0e6cb20c2c6a25
+file.0=/Users/chuongtran/PlanV/AndroidProjects/TestApp/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_82c4ebdd37d7d2fc44bd754a7795d07d30d88f87/classes.dex

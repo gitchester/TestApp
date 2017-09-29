@@ -1,0 +1,107 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/chuongtran/PlanV/AndroidProjects/TestApp/app/src/main/AndroidManifest.xml:2:1-27:12
+	package
+		ADDED from /Users/chuongtran/PlanV/AndroidProjects/TestApp/app/src/main/AndroidManifest.xml:3:5-38
+		INJECTED from /Users/chuongtran/PlanV/AndroidProjects/TestApp/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/chuongtran/PlanV/AndroidProjects/TestApp/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/chuongtran/PlanV/AndroidProjects/TestApp/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/chuongtran/PlanV/AndroidProjects/TestApp/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/chuongtran/PlanV/AndroidProjects/TestApp/app/src/main/AndroidManifest.xml:2:11-69
+	android:versionCode
+		INJECTED from /Users/chuongtran/PlanV/AndroidProjects/TestApp/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/chuongtran/PlanV/AndroidProjects/TestApp/app/src/main/AndroidManifest.xml
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from /Users/chuongtran/PlanV/AndroidProjects/TestApp/app/src/main/AndroidManifest.xml:5:5-80
+	android:name
+		ADDED from /Users/chuongtran/PlanV/AndroidProjects/TestApp/app/src/main/AndroidManifest.xml:5:22-77
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /Users/chuongtran/PlanV/AndroidProjects/TestApp/app/src/main/AndroidManifest.xml:6:5-81
+	android:name
+		ADDED from /Users/chuongtran/PlanV/AndroidProjects/TestApp/app/src/main/AndroidManifest.xml:6:22-78
+application
+ADDED from /Users/chuongtran/PlanV/AndroidProjects/TestApp/app/src/main/AndroidManifest.xml:8:5-25:19
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/chuongtran/.android/build-cache/49187cb091473bf0eab353657c655a7b41e663e9/output/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:design:26.0.0-alpha1] /Users/chuongtran/.android/build-cache/bd1817ae0d30fc74d0f3855248fffba3abe424d5/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] /Users/chuongtran/.android/build-cache/fe87ccf4c86a703fefa707122e148ae3b79a57b5/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] /Users/chuongtran/.android/build-cache/ea71330f1edb0a3ef8d0f5deb60ebbbe7fc19a46/output/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] /Users/chuongtran/.android/build-cache/ddb22b839b99747941b5adfef9ef6d44127fca02/output/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:transition:26.0.0-alpha1] /Users/chuongtran/.android/build-cache/fa0276c378fa5071f30783ff3a1888741edfc08d/output/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-v4:26.0.0-alpha1] /Users/chuongtran/.android/build-cache/959ef51e8dc610072885ecebe0ffbc56c5cdc65e/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] /Users/chuongtran/.android/build-cache/cecb23d2912e29ddf73d1f7f68f53a4a02e25068/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:26.0.0-alpha1] /Users/chuongtran/.android/build-cache/ebfa141ec3bc2bdae42f1ba47e2993fddbd10667/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] /Users/chuongtran/.android/build-cache/1e96cf31206d9c6541cfbd151ba008f2ec5257dc/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] /Users/chuongtran/.android/build-cache/352f4fa295e231b296a18395eed91557b0bac2da/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:26.0.0-alpha1] /Users/chuongtran/.android/build-cache/38806283d6552361fd676306bb9024dc2a529c42/output/AndroidManifest.xml:29:5-20
+	android:label
+		ADDED from /Users/chuongtran/PlanV/AndroidProjects/TestApp/app/src/main/AndroidManifest.xml:11:9-41
+	android:supportsRtl
+		ADDED from /Users/chuongtran/PlanV/AndroidProjects/TestApp/app/src/main/AndroidManifest.xml:13:9-35
+	android:roundIcon
+		ADDED from /Users/chuongtran/PlanV/AndroidProjects/TestApp/app/src/main/AndroidManifest.xml:12:9-54
+	android:allowBackup
+		ADDED from /Users/chuongtran/PlanV/AndroidProjects/TestApp/app/src/main/AndroidManifest.xml:9:9-35
+	android:icon
+		ADDED from /Users/chuongtran/PlanV/AndroidProjects/TestApp/app/src/main/AndroidManifest.xml:10:9-43
+	android:theme
+		ADDED from /Users/chuongtran/PlanV/AndroidProjects/TestApp/app/src/main/AndroidManifest.xml:14:9-40
+activity#com.sample.home.testapp.MainActivity
+ADDED from /Users/chuongtran/PlanV/AndroidProjects/TestApp/app/src/main/AndroidManifest.xml:15:9-24:20
+	android:label
+		ADDED from /Users/chuongtran/PlanV/AndroidProjects/TestApp/app/src/main/AndroidManifest.xml:17:13-45
+	android:theme
+		ADDED from /Users/chuongtran/PlanV/AndroidProjects/TestApp/app/src/main/AndroidManifest.xml:18:13-56
+	android:name
+		ADDED from /Users/chuongtran/PlanV/AndroidProjects/TestApp/app/src/main/AndroidManifest.xml:16:13-41
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /Users/chuongtran/PlanV/AndroidProjects/TestApp/app/src/main/AndroidManifest.xml:19:13-23:29
+action#android.intent.action.MAIN
+ADDED from /Users/chuongtran/PlanV/AndroidProjects/TestApp/app/src/main/AndroidManifest.xml:20:17-69
+	android:name
+		ADDED from /Users/chuongtran/PlanV/AndroidProjects/TestApp/app/src/main/AndroidManifest.xml:20:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/chuongtran/PlanV/AndroidProjects/TestApp/app/src/main/AndroidManifest.xml:22:17-77
+	android:name
+		ADDED from /Users/chuongtran/PlanV/AndroidProjects/TestApp/app/src/main/AndroidManifest.xml:22:27-74
+uses-sdk
+INJECTED from /Users/chuongtran/PlanV/AndroidProjects/TestApp/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/chuongtran/.android/build-cache/49187cb091473bf0eab353657c655a7b41e663e9/output/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:design:26.0.0-alpha1] /Users/chuongtran/.android/build-cache/bd1817ae0d30fc74d0f3855248fffba3abe424d5/output/AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] /Users/chuongtran/.android/build-cache/fe87ccf4c86a703fefa707122e148ae3b79a57b5/output/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] /Users/chuongtran/.android/build-cache/ea71330f1edb0a3ef8d0f5deb60ebbbe7fc19a46/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] /Users/chuongtran/.android/build-cache/ddb22b839b99747941b5adfef9ef6d44127fca02/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:26.0.0-alpha1] /Users/chuongtran/.android/build-cache/900d41cc89d38d82a75d51416f38ccd372ec9e64/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:26.0.0-alpha1] /Users/chuongtran/.android/build-cache/fa0276c378fa5071f30783ff3a1888741edfc08d/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:26.0.0-alpha1] /Users/chuongtran/.android/build-cache/959ef51e8dc610072885ecebe0ffbc56c5cdc65e/output/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] /Users/chuongtran/.android/build-cache/cecb23d2912e29ddf73d1f7f68f53a4a02e25068/output/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-fragment:26.0.0-alpha1] /Users/chuongtran/.android/build-cache/ebfa141ec3bc2bdae42f1ba47e2993fddbd10667/output/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] /Users/chuongtran/.android/build-cache/1e96cf31206d9c6541cfbd151ba008f2ec5257dc/output/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] /Users/chuongtran/.android/build-cache/352f4fa295e231b296a18395eed91557b0bac2da/output/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:26.0.0-alpha1] /Users/chuongtran/.android/build-cache/38806283d6552361fd676306bb9024dc2a529c42/output/AndroidManifest.xml:21:5-23:58
+	tools:overrideLibrary
+		ADDED from [com.android.support:design:26.0.0-alpha1] /Users/chuongtran/.android/build-cache/bd1817ae0d30fc74d0f3855248fffba3abe424d5/output/AndroidManifest.xml:23:9-59
+	android:targetSdkVersion
+		INJECTED from /Users/chuongtran/PlanV/AndroidProjects/TestApp/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/chuongtran/PlanV/AndroidProjects/TestApp/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/chuongtran/PlanV/AndroidProjects/TestApp/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/chuongtran/PlanV/AndroidProjects/TestApp/app/src/main/AndroidManifest.xml
+meta-data#android.support.VERSION
+ADDED from [com.android.support:design:26.0.0-alpha1] /Users/chuongtran/.android/build-cache/bd1817ae0d30fc74d0f3855248fffba3abe424d5/output/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] /Users/chuongtran/.android/build-cache/fe87ccf4c86a703fefa707122e148ae3b79a57b5/output/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] /Users/chuongtran/.android/build-cache/ea71330f1edb0a3ef8d0f5deb60ebbbe7fc19a46/output/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] /Users/chuongtran/.android/build-cache/ddb22b839b99747941b5adfef9ef6d44127fca02/output/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:recyclerview-v7:26.0.0-alpha1] /Users/chuongtran/.android/build-cache/900d41cc89d38d82a75d51416f38ccd372ec9e64/output/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:transition:26.0.0-alpha1] /Users/chuongtran/.android/build-cache/fa0276c378fa5071f30783ff3a1888741edfc08d/output/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:support-v4:26.0.0-alpha1] /Users/chuongtran/.android/build-cache/959ef51e8dc610072885ecebe0ffbc56c5cdc65e/output/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] /Users/chuongtran/.android/build-cache/cecb23d2912e29ddf73d1f7f68f53a4a02e25068/output/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-fragment:26.0.0-alpha1] /Users/chuongtran/.android/build-cache/ebfa141ec3bc2bdae42f1ba47e2993fddbd10667/output/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] /Users/chuongtran/.android/build-cache/1e96cf31206d9c6541cfbd151ba008f2ec5257dc/output/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] /Users/chuongtran/.android/build-cache/352f4fa295e231b296a18395eed91557b0bac2da/output/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-compat:26.0.0-alpha1] /Users/chuongtran/.android/build-cache/38806283d6552361fd676306bb9024dc2a529c42/output/AndroidManifest.xml:25:5-27:41
+	android:value
+		ADDED from [com.android.support:design:26.0.0-alpha1] /Users/chuongtran/.android/build-cache/bd1817ae0d30fc74d0f3855248fffba3abe424d5/output/AndroidManifest.xml:27:9-38
+	android:name
+		ADDED from [com.android.support:design:26.0.0-alpha1] /Users/chuongtran/.android/build-cache/bd1817ae0d30fc74d0f3855248fffba3abe424d5/output/AndroidManifest.xml:26:9-47

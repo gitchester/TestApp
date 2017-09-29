@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/chuongtran/PlanV/AndroidProjects/TestApp/app/build/intermediates/res/merged/debug/mipmap-xxhdpi/ic_launcher_round.png",
+        "source": "/Users/chuongtran/PlanV/AndroidProjects/TestApp/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/chuongtran/Downloads/TestApp/app/build/intermediates/res/merged/debug/mipmap-xxhdpi/ic_launcher_round.png",
+        "source": "/Users/chuongtran/Downloads/TestApp/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/chuongtran/Downloads/TestApp/app/build/intermediates/res/merged/debug/mipmap-xxhdpi/ic_launcher.png",
+        "source": "/Users/chuongtran/Downloads/TestApp/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/chuongtran/PlanV/AndroidProjects/TestApp/app/build/intermediates/res/merged/debug/mipmap-xxhdpi/ic_launcher.png",
+        "source": "/Users/chuongtran/PlanV/AndroidProjects/TestApp/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
+    }
+]

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- com.serenegiant.widget.PlayerGLView -->
+    <com.sample.home.testapp.slowmotion.test.PlayerTextureView
+        android:id="@+id/player_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="4dp"
+        android:visibility="gone" />
+
+    <ImageButton
+        android:id="@+id/play_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/player_view"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:background="@null"
+        android:scaleType="fitXY"
+        android:src="@android:drawable/ic_media_play"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btnStart"
+        android:layout_width="120dp"
+        android:layout_height="44dp"
+        android:layout_centerInParent="true"
+        android:text="Start"
+        android:textColor="@color/colorPrimary" />
+
+    <TextView
+        android:id="@+id/txtProgress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnStart"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
+
+</RelativeLayout>

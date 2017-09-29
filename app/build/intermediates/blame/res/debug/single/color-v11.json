@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/chuongtran/Downloads/TestApp/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_light.xml",
+        "source": "/Users/chuongtran/.android/build-cache/4d39511f95d1a2ac3a374e82b3ee596c6730b214/output/res/color-v11/abc_background_cache_hint_selector_material_light.xml"
+    },
+    {
+        "merged": "/Users/chuongtran/Downloads/TestApp/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_dark.xml",
+        "source": "/Users/chuongtran/.android/build-cache/4d39511f95d1a2ac3a374e82b3ee596c6730b214/output/res/color-v11/abc_background_cache_hint_selector_material_dark.xml"
+    },
+    {
+        "merged": "/Users/chuongtran/PlanV/AndroidProjects/TestApp/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_light.xml",
+        "source": "/Users/chuongtran/.android/build-cache/fe87ccf4c86a703fefa707122e148ae3b79a57b5/output/res/color-v11/abc_background_cache_hint_selector_material_light.xml"
+    },
+    {
+        "merged": "/Users/chuongtran/PlanV/AndroidProjects/TestApp/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_dark.xml",
+        "source": "/Users/chuongtran/.android/build-cache/fe87ccf4c86a703fefa707122e148ae3b79a57b5/output/res/color-v11/abc_background_cache_hint_selector_material_dark.xml"
+    }
+]

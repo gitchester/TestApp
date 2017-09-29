@@ -1,0 +1,4 @@
+#Fri Sep 22 10:10:45 ICT 2017
+base.0=/Users/chuongtran/PlanV/AndroidProjects/TestApp/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_8
+renamed.0=classes.dex
+file.0=/Users/chuongtran/PlanV/AndroidProjects/TestApp/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_8/classes.dex

@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/chuongtran/Downloads/TestApp/app/build/intermediates/res/merged/debug/menu/menu_main.xml",
+        "source": "/Users/chuongtran/Downloads/TestApp/app/src/main/res/menu/menu_main.xml"
+    },
+    {
+        "merged": "/Users/chuongtran/PlanV/AndroidProjects/TestApp/app/build/intermediates/res/merged/debug/menu/menu_main.xml",
+        "source": "/Users/chuongtran/PlanV/AndroidProjects/TestApp/app/src/main/res/menu/menu_main.xml"
+    }
+]
