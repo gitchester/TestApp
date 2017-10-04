@@ -11,8 +11,10 @@ import java.nio.ByteBuffer;
 import java.util.logging.Logger;
 
 import static com.sample.home.testapp.slowmotion.test.androidtranscoder.engine.MediaTranscoderEngine.endPoint;
+import static com.sample.home.testapp.slowmotion.test.androidtranscoder.engine.MediaTranscoderEngine.endTrimmingPoint;
 import static com.sample.home.testapp.slowmotion.test.androidtranscoder.engine.MediaTranscoderEngine.speed;
 import static com.sample.home.testapp.slowmotion.test.androidtranscoder.engine.MediaTranscoderEngine.startPoint;
+import static com.sample.home.testapp.slowmotion.test.androidtranscoder.engine.MediaTranscoderEngine.startTrimmingPoint;
 
 public class AudioTrackTranscoder implements TrackTranscoder {
 
@@ -163,6 +165,10 @@ public class AudioTrackTranscoder implements TrackTranscoder {
     private int drainEncoder(long timeoutUs) {
         mAudioDrainedEncodedCount++;
         Logger.getAnonymousLogger().info("chuong-SlowMotion AUDIO mAudioDrainedEncodedCount==" + mAudioDrainedEncodedCount);
+        long endTrimmingPresentationTimeUs = (endPoint - startPoint) * speed + startPoint + endTrimmingPoint - endPoint;
+        if (mBufferInfo.presentationTimeUs > endTrimmingPresentationTimeUs) {
+            mIsEncoderEOS = true;
+        }
         if (mIsEncoderEOS) return DRAIN_STATE_NONE;
 
         int result = mEncoder.dequeueOutputBuffer(mBufferInfo, timeoutUs);
@@ -195,31 +201,33 @@ public class AudioTrackTranscoder implements TrackTranscoder {
             return DRAIN_STATE_SHOULD_RETRY_IMMEDIATELY;
         }
         if (mBufferInfo.size >= 0) {
-            long currentPresentationTimeUs = mBufferInfo.presentationTimeUs;
-            boolean needsAddedFrames = false;
-            if (currentPresentationTimeUs >= startPoint) {
-                if (currentPresentationTimeUs <= endPoint) {
-                    needsAddedFrames = true;
-                    currentPresentationTimeUs = (currentPresentationTimeUs - startPoint) * speed + startPoint;
-                } else {
-                    currentPresentationTimeUs = (endPoint - startPoint) * speed + startPoint + currentPresentationTimeUs - endPoint;
+            if (mBufferInfo.presentationTimeUs >= startTrimmingPoint) {
+                long currentPresentationTimeUs = mBufferInfo.presentationTimeUs;
+                boolean needsAddedFrames = false;
+                if (currentPresentationTimeUs >= startPoint) {
+                    if (currentPresentationTimeUs <= endPoint) {
+                        needsAddedFrames = true;
+                        currentPresentationTimeUs = (currentPresentationTimeUs - startPoint) * speed + startPoint;
+                    } else {
+                        currentPresentationTimeUs = (endPoint - startPoint) * speed + startPoint + currentPresentationTimeUs - endPoint;
+                    }
                 }
-            }
-            final ByteBuffer byteBuffer = mEncoderBuffers.getOutputBuffer(result);
-            if (needsAddedFrames) {
-                long delta = Math.abs((currentPresentationTimeUs - mWrittenPresentationTimeUs) / speed);
-                for (int i = 1; i < speed; i++) {
-                    mBufferInfo.presentationTimeUs = mWrittenPresentationTimeUs + i * delta;
-                    mMuxer.writeSampleData(SAMPLE_TYPE, byteBuffer, mBufferInfo);
-                    mAudioEncodedFrameCount++;
-                    Logger.getAnonymousLogger().info("chuong-SlowMotion AUDIO mBufferInfo.presentationTimeUs==" + mBufferInfo.presentationTimeUs + "&&&delta=" + delta);
+                final ByteBuffer byteBuffer = mEncoderBuffers.getOutputBuffer(result);
+                if (needsAddedFrames) {
+                    long delta = Math.abs((currentPresentationTimeUs - mWrittenPresentationTimeUs) / speed);
+                    for (int i = 1; i < speed; i++) {
+                        mBufferInfo.presentationTimeUs = mWrittenPresentationTimeUs + i * delta;
+                        mMuxer.writeSampleData(SAMPLE_TYPE, byteBuffer, mBufferInfo);
+                        mAudioEncodedFrameCount++;
+                        Logger.getAnonymousLogger().info("chuong-SlowMotion AUDIO mBufferInfo.presentationTimeUs==" + mBufferInfo.presentationTimeUs + "&&&delta=" + delta);
+                    }
                 }
+                mBufferInfo.presentationTimeUs = currentPresentationTimeUs;
+                mMuxer.writeSampleData(SAMPLE_TYPE, byteBuffer, mBufferInfo);
+                mAudioEncodedFrameCount++;
+                Logger.getAnonymousLogger().info("chuong-SlowMotion AUDIO mBufferInfo.presentationTimeUs==" + mBufferInfo.presentationTimeUs);
+                mWrittenPresentationTimeUs = mBufferInfo.presentationTimeUs;
             }
-            mBufferInfo.presentationTimeUs = currentPresentationTimeUs;
-            mMuxer.writeSampleData(SAMPLE_TYPE, byteBuffer, mBufferInfo);
-            mAudioEncodedFrameCount++;
-            Logger.getAnonymousLogger().info("chuong-SlowMotion AUDIO mBufferInfo.presentationTimeUs==" + mBufferInfo.presentationTimeUs);
-            mWrittenPresentationTimeUs = mBufferInfo.presentationTimeUs;
             mEncoder.releaseOutputBuffer(result, false);
         }
         return DRAIN_STATE_CONSUMED;

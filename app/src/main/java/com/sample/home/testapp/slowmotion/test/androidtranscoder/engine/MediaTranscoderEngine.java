@@ -37,8 +37,10 @@ import java.util.logging.Logger;
 public class MediaTranscoderEngine {
 
 
-    public final static long startPoint = 4000000;
-    public final static long endPoint = 12000000;
+    public final static long startTrimmingPoint = 3000000;
+    public final static long endTrimmingPoint = 12000000;
+    public final static long startPoint = 6000000;
+    public final static long endPoint = 10000000;
     public final static long speed = 3;
     public final static PTSObject mSync = new PTSObject();
 

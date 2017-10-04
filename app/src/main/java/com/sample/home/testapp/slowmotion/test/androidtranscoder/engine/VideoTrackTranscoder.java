@@ -26,8 +26,10 @@ import java.nio.ByteBuffer;
 import java.util.logging.Logger;
 
 import static com.sample.home.testapp.slowmotion.test.androidtranscoder.engine.MediaTranscoderEngine.endPoint;
+import static com.sample.home.testapp.slowmotion.test.androidtranscoder.engine.MediaTranscoderEngine.endTrimmingPoint;
 import static com.sample.home.testapp.slowmotion.test.androidtranscoder.engine.MediaTranscoderEngine.speed;
 import static com.sample.home.testapp.slowmotion.test.androidtranscoder.engine.MediaTranscoderEngine.startPoint;
+import static com.sample.home.testapp.slowmotion.test.androidtranscoder.engine.MediaTranscoderEngine.startTrimmingPoint;
 
 // Refer: https://android.googlesource.com/platform/cts/+/lollipop-release/tests/tests/media/src/android/media/cts/ExtractDecodeEditEncodeMuxTest.java
 public class VideoTrackTranscoder implements TrackTranscoder {
@@ -216,8 +218,12 @@ public class VideoTrackTranscoder implements TrackTranscoder {
     }
 
     private int drainEncoder(long timeoutUs) {
+        long endTrimmingPresentationTimeUs = (endPoint - startPoint) * speed + startPoint + endTrimmingPoint - endPoint;
         mVideoDrainedEncodedCount++;
         Logger.getAnonymousLogger().info("chuong-SlowMotion VIDEO mVideoDrainedEncodedCount==" + mVideoDrainedEncodedCount);
+        if (mBufferInfo.presentationTimeUs > endTrimmingPresentationTimeUs) {
+            mIsEncoderEOS = true;
+        }
         if (mIsEncoderEOS) return DRAIN_STATE_NONE;
         int result = mEncoder.dequeueOutputBuffer(mBufferInfo, timeoutUs);
         switch (result) {
@@ -247,10 +253,12 @@ public class VideoTrackTranscoder implements TrackTranscoder {
             return DRAIN_STATE_SHOULD_RETRY_IMMEDIATELY;
         }
         if (mBufferInfo.size > 0) {
-            mMuxer.writeSampleData(QueuedMuxer.SampleType.VIDEO, mEncoderOutputBuffers[result], mBufferInfo);
-            mVideoEncodedFrameCount++;
-            Logger.getAnonymousLogger().info("chuong-SlowMotion VIDEO mBufferInfo.presentationTimeUs==" + mBufferInfo.presentationTimeUs);
-            mWrittenPresentationTimeUs = mBufferInfo.presentationTimeUs;
+            if (mBufferInfo.presentationTimeUs >= startTrimmingPoint) {
+                mMuxer.writeSampleData(QueuedMuxer.SampleType.VIDEO, mEncoderOutputBuffers[result], mBufferInfo);
+                mVideoEncodedFrameCount++;
+                Logger.getAnonymousLogger().info("chuong-SlowMotion VIDEO mBufferInfo.presentationTimeUs==" + mBufferInfo.presentationTimeUs);
+                mWrittenPresentationTimeUs = mBufferInfo.presentationTimeUs;
+            }
             mEncoder.releaseOutputBuffer(result, false);
         }
         return DRAIN_STATE_CONSUMED;
